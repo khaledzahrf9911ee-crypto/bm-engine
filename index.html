@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BOMB_CHEAT</title>
+    <title>BM_ENGINE</title>
     <style>
         body { background: #0f172a; color: #fff; font-family: Arial; text-align: center; margin: 0; padding: 0 15px 30px; }
         header { background: #111827; padding: 25px; border-bottom: 2px solid #38bdf8; }
@@ -14,13 +14,18 @@
         .free { color: #25D366; font-size: 26px; font-weight: bold; margin: 10px; }
         .user-text { font-size: 26px; font-weight: bold; color: #38bdf8; background: #0f172a; padding: 12px; border-radius: 10px; border: 1px solid #38bdf8; margin: 10px 0; direction: ltr; }
         .channel-text { font-size: 24px; font-weight: bold; color: #facc15; background: #0f172a; padding: 12px; border-radius: 10px; border: 1px solid #facc15; margin: 10px 0; direction: ltr; }
-        .btn { display: block; padding: 14px; border-radius: 10px; text-decoration: none; font-weight: bold; margin: 10px 0; border: none; width: 100%; font-size: 16px; font-family: Arial; cursor: pointer; color: #fff; }
+        .btn { display: block; padding: 14px; border-radius: 10px; font-weight: bold; margin: 10px 0; border: none; width: 100%; font-size: 16px; font-family: Arial; cursor: pointer; color: #fff; }
         .btn-telegram { background: #0088cc; }
+        .img-place { width: 100%; min-height: 180px; background: #0f172a; border: 2px dashed #38bdf8; border-radius: 12px; margin-bottom: 15px; color: #94a3b8; font-size: 18px; font-weight: bold; display: flex; align-items: center; justify-content: center; position: relative; overflow: hidden; }
+        .img-place img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+        .img-place-logo { width: 180px; height: 180px; border-radius: 50%; background: #0f172a; border: 3px dashed #38bdf8; display: flex; align-items: center; justify-content: center; margin: 0 auto 10px; color: #94a3b8; font-size: 16px; font-weight: bold; position: relative; overflow: hidden; }
+        .img-place-logo img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
     </style>
 </head>
 <body>
     <header>
-        <h1>BOMB_<span>CHEAT</span></h1>
+        <div class="img-place-logo">📷 مكان اللوجو<img src="logo.jpg" onerror="this.remove()"></div>
+        <h1>BM_<span>ENGINE</span></h1>
         <p>متجرك الرسمي - جودة - سرعة - ثقة</p>
     </header>
     <div class="box">
@@ -29,9 +34,8 @@
         <p>ملف اسكنات مجاني</p>
         <p>تواصل معنا للطلب</p>
     </div>
-
-    <!-- الخانة 1 : اليوزر والقناة -->
     <div class="card">
+        <div class="img-place">📷 مكان صورة 1<img src="photo1.jpg" onerror="this.remove()"></div>
         <h3>📱 حسابي وقناتي</h3>
         <p>يوزري:</p>
         <div class="user-text">@lib4X</div>
@@ -39,26 +43,21 @@
         <div class="channel-text">@BOMB_CHEAT_1</div>
         <button class="btn btn-telegram" onclick="goTelegram('عايز اتواصل معاك')">كلمـني تليجرام ✈️</button>
     </div>
-
-    <!-- الخانة 2 : ملف 120 فريم -->
     <div class="card">
+        <div class="img-place">📷 مكان صورة 2<img src="photo2.jpg" onerror="this.remove()"></div>
         <h3>ملف 120 فريم</h3>
         <div class="free">مجاني - تواصل للطلب 🎁</div>
         <button class="btn btn-telegram" onclick="goTelegram('عايز ملف 120 فريم المجاني')">اطلب مجانا ✈️</button>
     </div>
-
-    <!-- الخانة 3 : ملف اسكنات -->
     <div class="card">
+        <div class="img-place">📷 مكان صورة 3<img src="photo3.jpg" onerror="this.remove()"></div>
         <h3>ملف اسكنات</h3>
         <div class="free">مجاني - تواصل للطلب 🎁</div>
         <button class="btn btn-telegram" onclick="goTelegram('عايز ملف الاسكنات المجاني')">اطلب مجانا ✈️</button>
     </div>
-
     <script>
         const TELEGRAM_USER = "lib4X";
-        function goTelegram(msg) {
-            window.open("https://t.me/" + TELEGRAM_USER + "?text=" + encodeURIComponent(msg), "_blank");
-        }
+        function goTelegram(msg) { window.open("https://t.me/" + TELEGRAM_USER + "?text=" + encodeURIComponent(msg), "_blank"); }
     </script>
 </body>
 </html>
