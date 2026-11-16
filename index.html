@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BOMB_CHEAT</title>
+    <style>
+        body { background: #0f172a; color: #fff; font-family: Arial; text-align: center; margin: 0; padding: 0 15px 30px; }
+        header { background: #111827; padding: 25px; border-bottom: 2px solid #38bdf8; }
+        h1 { font-size: 38px; margin: 15px 0 0; }
+        h1 span { color: #38bdf8; }
+        .box { background: #1e293b; margin: 20px 0; padding: 20px; border-radius: 15px; border: 1px solid #334155; }
+        .card { background: #1e293b; margin: 20px 0; padding: 20px; border-radius: 15px; border: 1px solid #334155; }
+        .free { color: #25D366; font-size: 26px; font-weight: bold; margin: 10px; }
+        .user-text { font-size: 26px; font-weight: bold; color: #38bdf8; background: #0f172a; padding: 12px; border-radius: 10px; border: 1px solid #38bdf8; margin: 10px 0; direction: ltr; }
+        .channel-text { font-size: 24px; font-weight: bold; color: #facc15; background: #0f172a; padding: 12px; border-radius: 10px; border: 1px solid #facc15; margin: 10px 0; direction: ltr; }
+        .btn { display: block; padding: 14px; border-radius: 10px; text-decoration: none; font-weight: bold; margin: 10px 0; border: none; width: 100%; font-size: 16px; font-family: Arial; cursor: pointer; color: #fff; }
+        .btn-telegram { background: #0088cc; }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>BOMB_<span>CHEAT</span></h1>
+        <p>متجرك الرسمي - جودة - سرعة - ثقة</p>
+    </header>
+    <div class="box">
+        <h2>🔥 متوفر عندنا 🔥</h2>
+        <p>ملف 120 فريم مجاني</p>
+        <p>ملف اسكنات مجاني</p>
+        <p>تواصل معنا للطلب</p>
+    </div>
+
+    <!-- الخانة 1 : اليوزر والقناة -->
+    <div class="card">
+        <h3>📱 حسابي وقناتي</h3>
+        <p>يوزري:</p>
+        <div class="user-text">@lib4X</div>
+        <p>قناتي:</p>
+        <div class="channel-text">@BOMB_CHEAT_1</div>
+        <button class="btn btn-telegram" onclick="goTelegram('عايز اتواصل معاك')">كلمـني تليجرام ✈️</button>
+    </div>
+
+    <!-- الخانة 2 : ملف 120 فريم -->
+    <div class="card">
+        <h3>ملف 120 فريم</h3>
+        <div class="free">مجاني - تواصل للطلب 🎁</div>
+        <button class="btn btn-telegram" onclick="goTelegram('عايز ملف 120 فريم المجاني')">اطلب مجانا ✈️</button>
+    </div>
+
+    <!-- الخانة 3 : ملف اسكنات -->
+    <div class="card">
+        <h3>ملف اسكنات</h3>
+        <div class="free">مجاني - تواصل للطلب 🎁</div>
+        <button class="btn btn-telegram" onclick="goTelegram('عايز ملف الاسكنات المجاني')">اطلب مجانا ✈️</button>
+    </div>
+
+    <script>
+        const TELEGRAM_USER = "lib4X";
+        function goTelegram(msg) {
+            window.open("https://t.me/" + TELEGRAM_USER + "?text=" + encodeURIComponent(msg), "_blank");
+        }
+    </script>
+</body>
+</html>
