@@ -1,63 +1,102 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BM_ENGINE</title>
-    <style>
-        body { background: #0f172a; color: #fff; font-family: Arial; text-align: center; margin: 0; padding: 0 15px 30px; }
-        header { background: #111827; padding: 25px; border-bottom: 2px solid #38bdf8; }
-        h1 { font-size: 38px; margin: 15px 0 0; }
-        h1 span { color: #38bdf8; }
-        .box { background: #1e293b; margin: 20px 0; padding: 20px; border-radius: 15px; border: 1px solid #334155; }
-        .card { background: #1e293b; margin: 20px 0; padding: 20px; border-radius: 15px; border: 1px solid #334155; }
-        .free { color: #25D366; font-size: 26px; font-weight: bold; margin: 10px; }
-        .user-text { font-size: 26px; font-weight: bold; color: #38bdf8; background: #0f172a; padding: 12px; border-radius: 10px; border: 1px solid #38bdf8; margin: 10px 0; direction: ltr; }
-        .channel-text { font-size: 24px; font-weight: bold; color: #facc15; background: #0f172a; padding: 12px; border-radius: 10px; border: 1px solid #facc15; margin: 10px 0; direction: ltr; }
-        .btn { display: block; padding: 14px; border-radius: 10px; font-weight: bold; margin: 10px 0; border: none; width: 100%; font-size: 16px; font-family: Arial; cursor: pointer; color: #fff; }
-        .btn-telegram { background: #0088cc; }
-        .img-place { width: 100%; min-height: 180px; background: #0f172a; border: 2px dashed #38bdf8; border-radius: 12px; margin-bottom: 15px; color: #94a3b8; font-size: 18px; font-weight: bold; display: flex; align-items: center; justify-content: center; position: relative; overflow: hidden; }
-        .img-place img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
-        .img-place-logo { width: 180px; height: 180px; border-radius: 50%; background: #0f172a; border: 3px dashed #38bdf8; display: flex; align-items: center; justify-content: center; margin: 0 auto 10px; color: #94a3b8; font-size: 16px; font-weight: bold; position: relative; overflow: hidden; }
-        .img-place-logo img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>BM_ENGINE - محرك الرعب</title>
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', Tahoma, Arial, sans-serif; }
+body { background: #0a1628; color: #ffffff; padding: 15px; padding-bottom: 30px; }
+a { text-decoration: none; }
+
+/* اللوجو */
+.logo-box { text-align: center; margin-bottom: 20px; }
+.logo-box img { width: 140px; height: 140px; object-fit: cover; border-radius: 50%; border: 2px dashed #00c8ff; background: #0a1628; }
+.logo-box h1 { font-size: 30px; margin-top: 10px; letter-spacing: 1px; }
+.logo-box h1 span { color: #00c8ff; }
+.logo-box p { color: #9aa8c0; font-size: 13px; margin-top: 6px; }
+
+/* الكروت */
+.card { background: #13233f; border: 1px solid #1e3a5f; border-radius: 15px; padding: 20px; margin-bottom: 15px; text-align: center; }
+.card h2 { font-size: 18px; margin-bottom: 15px; }
+.card ul { list-style: none; color: #cccccc; font-size: 14px; line-height: 2.1; }
+.card p { color: #cccccc; font-size: 14px; line-height: 1.8; }
+
+/* كروت الصور - ده اللي اتظبط بس */
+.img-card { background: #13233f; border: 1px solid #1e3a5f; border-radius: 15px; padding: 10px; margin-bottom: 15px; text-align: center; overflow: hidden; }
+.img-card img { width: 100%; height: auto; display: block; border-radius: 10px; object-fit: contain; }
+.img-card p { margin-top: 10px; font-size: 14px; color: #cccccc; }
+.img-card .green { color: #22ff88; font-weight: bold; margin-top: 6px; font-size: 15px; }
+.img-card .small { color: #9aa8c0; font-size: 13px; margin-top: 4px; }
+
+label { display: block; color: #9aa8c0; font-size: 13px; margin: 12px 0 5px; }
+
+/* الزرار */
+.btn { display: block; width: 100%; padding: 13px; border-radius: 8px; border: none; font-size: 15px; font-weight: bold; margin-top: 10px; cursor: pointer; color: white; text-align: center; }
+.btn-blue { background: #0099ff; }
+.btn-dark { background: #0a1628; border: 1px solid #0099ff; color: #00c8ff; }
+.btn-yellow { background: #0a1628; border: 1px solid #ffcc00; color: #ffcc00; }
+.btn-green { background: #00c853; }
+
+.footer { text-align: center; color: #6a7a95; font-size: 12px; margin-top: 20px; line-height: 1.8; }
+</style>
 </head>
 <body>
-    <header>
-        <div class="img-place-logo">📷 مكان اللوجو<img src="logo.jpg" onerror="this.remove()"></div>
-        <h1>BM_<span>ENGINE</span></h1>
-        <p>متجرك الرسمي - جودة - سرعة - ثقة</p>
-    </header>
-    <div class="box">
-        <h2>🔥 متوفر عندنا 🔥</h2>
-        <p>ملف 120 فريم مجاني</p>
-        <p>ملف اسكنات مجاني</p>
-        <p>تواصل معنا للطلب</p>
-    </div>
-    <div class="card">
-        <div class="img-place">📷 مكان صورة 1<img src="photo1.jpg" onerror="this.remove()"></div>
-        <h3>📱 حسابي وقناتي</h3>
-        <p>يوزري:</p>
-        <div class="user-text">@lib4X</div>
-        <p>قناتي:</p>
-        <div class="channel-text">@BOMB_CHEAT_1</div>
-        <button class="btn btn-telegram" onclick="goTelegram('عايز اتواصل معاك')">كلمـني تليجرام ✈️</button>
-    </div>
-    <div class="card">
-        <div class="img-place">📷 مكان صورة 2<img src="photo2.jpg" onerror="this.remove()"></div>
-        <h3>ملف 120 فريم</h3>
-        <div class="free">مجاني - تواصل للطلب 🎁</div>
-        <button class="btn btn-telegram" onclick="goTelegram('عايز ملف 120 فريم المجاني')">اطلب مجانا ✈️</button>
-    </div>
-    <div class="card">
-        <div class="img-place">📷 مكان صورة 3<img src="photo3.jpg" onerror="this.remove()"></div>
-        <h3>ملف اسكنات</h3>
-        <div class="free">مجاني - تواصل للطلب 🎁</div>
-        <button class="btn btn-telegram" onclick="goTelegram('عايز ملف الاسكنات المجاني')">اطلب مجانا ✈️</button>
-    </div>
-    <script>
-        const TELEGRAM_USER = "lib4X";
-        function goTelegram(msg) { window.open("https://t.me/" + TELEGRAM_USER + "?text=" + encodeURIComponent(msg), "_blank"); }
-    </script>
+
+<!-- اللوجو -->
+<div class="logo-box">
+  <img src="logo.jpg" alt="BM_ENGINE">
+  <h1>BM_<span>ENGINE</span></h1>
+  <p>محرك الرعب - جودة - سرعة - ثقة</p>
+</div>
+
+<!-- متوفر عندنا -->
+<div class="card">
+  <h2>🔥 متوفر عندنا 🔥</h2>
+  <ul>
+    <li>ملف 120 فريم مجاني</li>
+    <li>ملف اسكنات مجاني</li>
+    <li>تواصل معنا للطلب</li>
+  </ul>
+</div>
+
+<!-- الكونتاكت -->
+<div class="img-card">
+  <img src="photo1.jpg" alt="Contact">
+  <p>📱 حسابي وقناتي</p>
+  <label>يوزري:</label>
+  <a href="https://t.me/lib4X" class="btn btn-dark">@lib4X</a>
+  <label>قناتي:</label>
+  <a href="https://t.me/BOMB_CHEAT_1" class="btn btn-yellow">@BOMB_CHEAT_1</a>
+  <a href="https://t.me/lib4X" class="btn btn-blue">✏️ كلمني تلجرام</a>
+</div>
+
+<!-- 120 فريم -->
+<div class="img-card">
+  <img src="photo2.jpg" alt="120 FPS">
+  <p>ملف 120 فريم</p>
+  <p class="green">🎁 مجاني - تواصل للطلب</p>
+  <a href="https://t.me/lib4X" class="btn btn-blue">✏️ اطلب مجانا</a>
+</div>
+
+<!-- الاسكنات -->
+<div class="img-card">
+  <img src="photo3.jpg" alt="Skins Pack">
+  <p>ملف اسكنات</p>
+  <p class="green">🎁 مجاني - تواصل للطلب</p>
+  <a href="https://t.me/lib4X" class="btn btn-blue">✏️ اطلب مجانا</a>
+</div>
+
+<!-- تنبيه -->
+<div class="card">
+  <h2>⚠️ تنبيه مهم</h2>
+  <p>الملفات مجانية بالكامل، لو حد طلب منك فلوس بإسم الصفحة اعرف انه نصاب.<br>التواصل الرسمي فقط من خلال @lib4X</p>
+</div>
+
+<div class="footer">
+  BM_ENGINE © 2026 - جميع الحقوق محفوظة<br>
+  صنع بحب لمحبي ببجي موبايل
+</div>
+
 </body>
 </html>
